@@ -88,6 +88,9 @@ WSGI_APPLICATION = 'grade_pending_calculator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
+# this is the command for logging into the database:
+# sudo -u postgres psql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -96,6 +99,9 @@ DATABASES = {
         'PASSWORD': 'halloween31',
         'HOST': 'localhost',
         'PORT': '',
+        'TEST': {
+            'NAME': 'grade_pending_calculator_test',
+        },
     }
 }
 
