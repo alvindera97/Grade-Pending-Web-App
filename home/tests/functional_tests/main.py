@@ -34,6 +34,8 @@ class Main(StaticLiveServerTestCase, TestCase):
         cls.home_page = HomePage(title="Home Page", )
         cls.root.add_child(instance=cls.home_page).save_revision().publish()  # publish the home page!
 
+        super(Main, cls).setUpClass()
+
     def setUp(self) -> None:
         self.browser = Chrome()
         self.browser.implicitly_wait(3)
