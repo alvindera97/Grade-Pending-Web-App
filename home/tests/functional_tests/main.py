@@ -4,7 +4,7 @@
     All other test classes inherit critical performance behaviour from this module's contents
 """
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from selenium.webdriver import Chrome
 from wagtail.core.models import Page, Site
 
@@ -15,11 +15,13 @@ from home.models import HomePage
 site_main_title: str = "Grade Pending Calculator | Calculate your GP and CGPA in seconds".title()
 
 
+@override_settings(STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage')
 class Main(StaticLiveServerTestCase, TestCase):
     """Main test class.
 
        This class does not carry out any tests, however it contains set up
        data for the functional tests."""
+
     @classmethod
     def setUpClass(cls):
         # set up root page if there isn't any,

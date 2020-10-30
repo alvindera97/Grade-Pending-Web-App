@@ -3,7 +3,7 @@
   All other test classes inherit critical performance behaviour from this module's contents
 """
 from django.http import HttpRequest
-from django.test import Client
+from django.test import Client, override_settings
 from wagtail.core.models import Page, Site
 from wagtail.tests.utils import WagtailPageTests
 
@@ -11,14 +11,16 @@ from home.models import HomePage
 from ..functional_tests.main import site_main_title
 
 
+@override_settings(STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage')
 class Main(WagtailPageTests):
     """Main test class.
 
        This class does not carry out any tests, however it contains set up
        data for the unit tests."""
+
     @classmethod
-    # Set up root page required if there isn't any
     def setUpTestData(cls):
+        # Set up root page required if there isn't any
         cls.root = Page.objects.get(title="Root").specific if Page.objects.count() > 0 else Page.objects.create(
             title="Root",
             path="001",
