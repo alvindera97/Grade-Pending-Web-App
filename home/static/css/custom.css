@@ -2,5 +2,5 @@ body {
     background: url(../imgs/background_stretched.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -100px;
+    /* background-position-y: -50px; */
 }
