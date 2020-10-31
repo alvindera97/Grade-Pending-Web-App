@@ -2,15 +2,25 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 {% endblock %}
 
 
 {% block content %}
-<div class="section container-fluid" id="container-with-background">
+<div class="section container" id="container-with-background">
     <div class="container">
         <div class="row">
-
+            <div class="col-md-6 d-flex-row" id="login-register-institutions-section" style="margin-top:7rem">
+                <!--login button-->
+                <button type="button" class="btn btn-primary">LOGIN</button>
+                <!--register button-->
+                <button type="button" class="btn btn-primary">REGISTER</button>
+                <!--Separator -->
+                |
+                <!--/Separator -->
+                <!--institutions button-->
+                <button type="button" class="btn btn-secondary">INSTITUTIONS</button>
+            </div>
         </div>
     </div>
 </div>
