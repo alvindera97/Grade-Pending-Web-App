@@ -1,5 +1,6 @@
 body {
-    background: url(../imgs/background.svg);
+    background: url(../imgs/background_stretched.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: -100px;
 }
