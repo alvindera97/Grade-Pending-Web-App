@@ -8,24 +8,31 @@
 
 {% block content %}
 <div class="section" id="container-with-background">
-    <div class="container">
+    <div class="container" id="login-logout-grade-pending-calculator-large-text-section">
         <div class="row mt-5 pt-5">
             <div class="col-md-5 text-center mt-5 ml-md-5 px-md-5 pt-5" id="login-register-institutions-section">
                 <!--login button-->
-                <a class="btn btn-secondary btn-lg mr-2 mb-3" href="#">LOGIN</a>
+                <a id="login-button" class="btn btn-secondary btn-lg mr-2 mb-3" href="#">LOGIN</a>
                 <!--register button-->
-                <a class="btn btn-secondary btn-lg mr-2 mb-3" href="#">REGISTER</a>
+                <a id="register-button" class="btn btn-secondary btn-lg mr-2 mb-3" href="#">REGISTER</a>
                 <svg id="arrow-right" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square-fill mb-3 d-none d-xl-inline"
                      fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                           d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
                 </svg>
-                <a class="btn btn-outline-secondary btn-lg ml-2 mb-3" href="#">INSTITUTIONS</a>
+                <a id="grade-pending-large-text" class="btn btn-outline-secondary btn-lg ml-2 mb-3" href="#">INSTITUTIONS</a>
             </div>
             <div class="col-md-6 mt-5 pt-5" id="grade-pending-calculator-large-text">
                 <h1 class="display-3 text-secondary font-weight-bolder text-center ml-md-5 pl-md-5">
                     GRADE PENDING CALCULATOR
                 </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="illustration-and-text-section">
+        <div class="row mt-1">
+            <div class="col-md-5 text-center ml-md-5 px-md-5" id="calculator-svg-column">
+                <img src="{% static 'svg/calculator.svg' %}" id="calculator-svg" alt="" style="width: 85%;">
             </div>
         </div>
     </div>
