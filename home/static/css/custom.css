@@ -16,7 +16,7 @@ $grid-breakpoints: (
 */
 
 body {
-    background: url(../imgs/background_stretched_lighter_shade.svg);
+    /*background: url(../imgs/background_stretched_lighter_shade.svg);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -50px;
