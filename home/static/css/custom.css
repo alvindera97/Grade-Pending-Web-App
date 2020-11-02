@@ -37,3 +37,40 @@ body {
 /*  */
 /*  */
 /*  */
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1499px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: 0px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1399px) {
+    body {
+        //margin-top: -70px;
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: 0px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -20px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 1399px) {
+   #grade-pending-calculator-large-text {
+       font-size: calc(1.525rem + 1.3vw) !important;
+       font-weight: bolder !important;
+       line-height: 1.2; } !important;
+   }
+}
