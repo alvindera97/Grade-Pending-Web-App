@@ -62,7 +62,7 @@ body {
 @media (min-width: 1500px) {
     body {
         background: url(../imgs/background_stretched_lighter_shade.svg);
-        background-position-y: -20px !important;
+        background-position-y: -40px !important;
         background-size: cover;
         background-repeat: no-repeat;
     }
