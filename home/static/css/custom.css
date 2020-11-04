@@ -1,0 +1,90 @@
+/* Bootstrap v5 break points */
+
+/*
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+*/
+
+body {
+    /*background: url(../imgs/background_stretched_lighter_shade.svg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+}
+
+/* at 1520px, the C in Calculator (large text) is just sitting on the edge of the background image. */
+/* qt 1490px, the C in Calculator (large text) sits [still kind of artistically] on the background image. */
+/* at 1410px, the C in Calculator (large text) has been cut half by the background image.
+   the background image has also cut through 2 more characters "a" and "l".*/
+/* at 1399 px, THERE ARE MAJOR DIFFERENCES THAT HAVE OCCURRED MOST OF THEM ARE BREAKING CHANGES. */
+/* at 767px THESE BREAKING CHANGES STOP AND WITH THE DISAPPEARANCE OF SOME CHARACTERS AS THE FRONTEND STARTS TO ADOPT
+    A MOBILE-LIKE DISPLAY. */
+/* at 1310px the INSTITUTIONS button is now looking dangerously cut by the background image. */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1199px) {
+    div#illustration-and-text-section {
+        margin-top: -50px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: 0px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -40px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1399px) {
+    body {
+        /* margin-top: -70px; */
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: 0px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+@media (max-width: 439px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-x: -700px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+    #grade-pending-calculator-large-text {
+       font-size: calc(1.525rem + 1.3vw) !important;
+       font-weight: bolder !important;
+       line-height: 1.2; } !important;
+   }
+}

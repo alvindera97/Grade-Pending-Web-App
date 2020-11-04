@@ -8,11 +8,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Roboto font -->
+    <!--Noto Sans font -->
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
 
     <!--Bootstrap CSS modified by Sass to create a custom version of bootstrap.css. This file is called "scss_bootstrap.css" -->
     <link rel="stylesheet" href="{% static 'css/scss_bootstrap.css' %}">
+
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
 
     <title>
         {% block title %}
@@ -21,16 +25,11 @@
     </title>
 </head>
 <body>
-<h1>{% block heading %}Hello, world!{% endblock %}</h1>
+{% block content %}
+{# override this in templates #}
+{% endblock %}
 
-<!-- Optional JavaScript; choose one of the two! -->
-
-<!-- Option 1: Bootstrap Bundle with Popper.js -->
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
-<!-- Option 2: Separate Popper.js and Bootstrap JS
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
--->
 </body>
 </html>
