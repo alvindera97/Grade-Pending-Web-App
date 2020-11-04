@@ -46,23 +46,7 @@ body {
     }
 }
 
-@media (max-width: 1399px) {
-    body {
-        /* margin-top: -70px; */
-        background: url(../imgs/background_stretched_lighter_shade.svg);
-        background-position-y: 0px !important;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    #grade-pending-calculator-large-text {
-       font-size: calc(1.525rem + 1.3vw) !important;
-       font-weight: bolder !important;
-       line-height: 1.2; } !important;
-   }
-}
-
-@media (max-width: 1499px) {
+@media (min-width: 1400px) and (max-width: 1499px) {
     body {
         background: url(../imgs/background_stretched_lighter_shade.svg);
         background-position-y: 0px !important;
@@ -78,4 +62,29 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
     }
+}
+
+@media (max-width: 1399px) {
+    body {
+        /* margin-top: -70px; */
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: 0px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+@media (max-width: 439px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-x: -700px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+    #grade-pending-calculator-large-text {
+       font-size: calc(1.525rem + 1.3vw) !important;
+       font-weight: bolder !important;
+       line-height: 1.2; } !important;
+   }
 }
