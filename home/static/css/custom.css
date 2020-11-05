@@ -75,10 +75,7 @@ body {
 
 @media (max-width: 439px) {
     body {
-        background: url(../imgs/background_stretched_lighter_shade.svg);
-        background-position-x: -700px !important;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: none;
     }
 }
 
