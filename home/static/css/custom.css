@@ -16,10 +16,7 @@ $grid-breakpoints: (
 */
 
 body {
-    /*background: url(../imgs/background_stretched_lighter_shade.svg);*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: -50px;
+
 }
 
 /* at 1520px, the C in Calculator (large text) is just sitting on the edge of the background image. */
@@ -40,13 +37,25 @@ body {
 
 
 /* MEDIA QUERIES */
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
     div#illustration-and-text-section {
         margin-top: -50px;
     }
 }
 
-@media (min-width: 1400px) and (max-width: 1499px) {
+@media screen and (max-width: 480px) and (min-width: 440px) {
+    body {
+        background-position-x: -150px !important;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    body {
+        background: none !important;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1550px) {
     body {
         background: url(../imgs/background_stretched_lighter_shade.svg);
         background-position-y: 0px !important;
@@ -55,33 +64,65 @@ body {
     }
 }
 
-@media (min-width: 1500px) {
+@media screen and (min-width: 1500px) (max-width: 1550px) {
     body {
         background: url(../imgs/background_stretched_lighter_shade.svg);
-        background-position-y: -40px !important;
+        background-position-y: -20px !important;
         background-size: cover;
         background-repeat: no-repeat;
     }
 }
 
-@media (max-width: 1399px) {
+@media screen and (min-width: 1550px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -50px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 1399px) and (min-width: 768px) {
     body {
         /* margin-top: -70px; */
         background: url(../imgs/background_stretched_lighter_shade.svg);
-        background-position-y: 0px !important;
+        background-position-y: -100px !important;
         background-size: cover;
         background-repeat: no-repeat;
     }
     #grade-pending-calculator-large-text {
        font-size: calc(1.525rem + 1.3vw) !important;
        font-weight: bolder !important;
-       line-height: 1.2; } !important;
+       line-height: 1.2; !important;
    }
 }
 
-
-@media (max-width: 439px) {
+@media screen and (max-width: 767px) and (min-width: 440px) {
     body {
-        background: none;
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -60px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 510px) and (min-width: 481px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -70px !important;
+        background-position-x: -100px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+    body {
+        background: url(../imgs/background_stretched_lighter_shade.svg);
+        background-position-y: -20px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
