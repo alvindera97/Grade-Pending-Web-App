@@ -72,16 +72,16 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
     }
-
-@media (max-width: 439px) {
-    body {
-        background: none;
-    }
-}
-
     #grade-pending-calculator-large-text {
        font-size: calc(1.525rem + 1.3vw) !important;
        font-weight: bolder !important;
        line-height: 1.2; } !important;
    }
+}
+
+
+@media (max-width: 439px) {
+    body {
+        background: none;
+    }
 }
