@@ -3,6 +3,7 @@ from .main import Main, site_main_title
 
 class HomePageTest(Main):
     """Home page index page test"""
+
     def setUp(self) -> None: pass
 
     def tearDown(self) -> None: pass
