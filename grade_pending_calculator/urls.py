@@ -16,6 +16,8 @@ urlpatterns = [
 
     path('search/', search_views.search, name='search'),
 
+    # django-allauth urls
+    path('', include('allauth.urls')),
 ]
 
 
