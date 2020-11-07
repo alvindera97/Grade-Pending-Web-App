@@ -1,61 +1,38 @@
-{% extends "account/base.html" %}
+{% extends "home/home_base.html" %}
 
-{% load i18n %}
-{% load account socialaccount %}
-{% load wagtailcore_tags %}
 {% load static %}
 
-{% block head_title %}Grade Pending Calculator | Calculate Your Gp And Cgpa In Seconds{% endblock %}
-
-{% block extra_head %}
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!--Noto Sans font -->
-<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-
-<!--Bootstrap CSS modified by Sass to create a custom version of bootstrap.css. This file is called "scss_bootstrap.css" -->
-<link rel="stylesheet" href="{% static 'css/scss_bootstrap.css' %}">
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/custom_login.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
-
-{% get_providers as socialaccount_providers %}
-
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-<div class="socialaccount_ballot">
-
-    <ul class="socialaccount_providers">
-        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-    </ul>
-
-    <div class="login-or">{% trans 'or' %}</div>
-
+<div class="section vertical-center" id="login">
+    <div class="container-fluid" id="illustrations-and-cta">
+        <div class="row">
+            <div class="col-4 my-auto text-center" id="check-results-table-illustration">
+                <img id="results-check-svg" src="{% static 'svg/results_check.svg' %}" alt="">
+            </div>
+            <div class="col-4 text-center my-auto d-flex flex-column" id="cta">
+                <a href="#" class="mb-4">
+                    <img id="github-svg" src="{% static 'svg/github.svg' %}" alt="">
+                </a>
+                <a href="#">
+                    <img id="login-with-google-svg" src="{% static 'svg/login_with_google.svg' %}" alt="">
+                </a>
+                <a href="#">
+                    <img id="sign-in-with-apple-svg" class="mt-2" src="{% static 'svg/sign_in_with_apple.svg' %}" alt="">
+                </a>
+                <a href="#">
+                    <img id="continue-with-facebook-svg" src="{% static 'svg/continue_with_facebook.svg' %}" alt="">
+                </a>
+            </div>
+            <div class="col-4 text-center my-auto" id="check-digital-results-table">
+                <img id="check-digital-results-table-svg" src="{% static 'svg/check_digital_results_table.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
 </div>
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-    {% endif %}
-    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
 
 {% endblock %}
