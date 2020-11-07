@@ -1,0 +1,42 @@
+body {
+    background: url(../imgs/backgrounds/background_login.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+/* at 729 px and below, start the mobile design */
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 730px) {
+    #results-check-svg {
+        max-width: inherit;
+    }
+    #check-digital-results-table-svg {
+        max-width: inherit;
+    }
+}
+
+@media screen and (max-width: 880px) and (min-width: 730px) {
+    #github-svg {
+        max-width: inherit;
+    }
+    #login-with-google-svg {
+        max-width: -webkit-fill-available;
+    }
+    #sign-in-with-apple-svg {
+        max-width: -webkit-fill-available;
+    }
+    #continue-with-facebook-svg {
+        max-width: -webkit-fill-available;
+    }
+}
