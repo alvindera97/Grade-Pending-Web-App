@@ -14,6 +14,12 @@ body {
 
 /* at 729 px and below, start the mobile design */
 
+#sign-in-with-apple-svg {
+    max-width: -webkit-fill-available;
+}
+#continue-with-facebook-svg {
+    max-width: -webkit-fill-available;
+}
 
 /* MEDIA QUERIES */
 
@@ -31,12 +37,6 @@ body {
         max-width: inherit;
     }
     #login-with-google-svg {
-        max-width: -webkit-fill-available;
-    }
-    #sign-in-with-apple-svg {
-        max-width: -webkit-fill-available;
-    }
-    #continue-with-facebook-svg {
         max-width: -webkit-fill-available;
     }
 }
