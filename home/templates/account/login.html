@@ -19,15 +19,21 @@
                     <img id="github-svg" src="{% static 'svg/github.svg' %}" alt="">
                 </a>
                 <a href="#">
+                    {% block google_button %}
                     <img id="login-with-google-svg" src="{% static 'svg/login_with_google.svg' %}" alt="">
+                    {% endblock %}
                 </a>
                 <a href="#">
+                    {% block apple_button %}
                     <img id="sign-in-with-apple-svg" class="mt-2" src="{% static 'svg/sign_in_with_apple.svg' %}" alt="">
+                    {% endblock %}
                 </a>
                 <a href="#">
+                    {% block facebook_button %}
                     <img id="continue-with-facebook-svg" src="{% static 'svg/continue_with_facebook.svg' %}" alt="">
+                    {% endblock %}
                 </a>
-                <h4 class="mt-2 text-muted">If you don't have an account, <a href="/register"><font class="text-secondary">register here.</font></a></h4>
+                <h4 class="mt-2 text-muted">{% block if_account %}If you don't have an account, {% endblock %}<a href="/{% block if_account_link %}register{% endblock %}"><font class="text-secondary">{% block if_account_instruction_text %}register here.{% endblock %}</font></a></h4>
             </div>
             <div class="col-4 text-center my-auto" id="check-digital-results-table">
                 <img id="check-digital-results-table-svg" src="{% static 'svg/check_digital_results_table.svg' %}" alt="">
