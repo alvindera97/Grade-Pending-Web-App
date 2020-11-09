@@ -13,10 +13,10 @@
 <div class="section vertical-center" id="login">
     <div class="container-fluid" id="illustrations-and-cta">
         <div class="row">
-            <div class="col-4 my-auto text-center" id="check-results-table-illustration">
+            <div class="col-md-4 my-auto text-center d-flex d-none d-md-inline" id="check-results-table-illustration">
                 <img id="results-check-svg" src="{% static 'svg/results_check.svg' %}" alt="">
             </div>
-            <div class="col-4 text-center my-auto d-flex flex-column" id="cta">
+            <div class="col-md-4 text-center my-auto d-flex flex-column" id="cta">
                 <a href="https://github.com/alvindera97/Grade-Pending-Web-App" class="mb-4">
                     <img id="github-svg" src="{% static 'svg/github.svg' %}" alt="">
                 </a>
@@ -37,7 +37,7 @@
                 </a>
                 <h4 id="if-account-link" class="mt-2 text-muted">{% block if_account %}If you don't have an account{% endblock %}, <a href="/{% block if_account_link %}signup{% endblock %}"><font class="text-secondary">{% block if_account_instruction_text %}register here{% endblock %}</font></a>.</h4>
             </div>
-            <div class="col-4 text-center my-auto" id="check-digital-results-table">
+            <div class="col-md-4 text-center my-auto" id="check-digital-results-table">
                 <img id="check-digital-results-table-svg" src="{% static 'svg/check_digital_results_table.svg' %}" alt="">
             </div>
         </div>

@@ -23,7 +23,7 @@ body {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 881px) {
     #results-check-svg {
         max-width: inherit;
     }
@@ -32,11 +32,26 @@ body {
     }
 }
 
-@media screen and (max-width: 880px) and (min-width: 730px) {
+@media screen and (max-width: 880px) and (min-width: 768px) {
     #github-svg {
         max-width: inherit;
     }
     #login-with-google-svg {
+        max-width: -webkit-fill-available;
+    }
+    #results-check-svg {
+        max-width: -webkit-fill-available;
+    }
+    #check-digital-results-table-svg {
+        max-width: -webkit-fill-available;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #results-check-svg {
+        max-width: -webkit-fill-available;
+    }
+    #check-digital-results-table-svg {
         max-width: -webkit-fill-available;
     }
 }
