@@ -21,3 +21,9 @@ class TestHomePage(Main):
         home_page_button = self.browser.find_element_by_id('login-button')
         home_page_button.click()
         self.assertEqual(self.browser.current_url, self.live_server_url + '/login/')
+
+    def test_register_button(self):
+        """Test if the home page button is functional"""
+        home_page_button = self.browser.find_element_by_id('register-button')
+        home_page_button.click()
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/signup/')
