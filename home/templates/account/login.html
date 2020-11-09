@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/custom_login.css' %}">
 {% endblock %}
 
+{% block title_prefix %}Login | {% endblock %}
+{% block title %}Grade Pending Calculator | Calculate Your Gp And Cgpa In Seconds{% endblock %}
 {% block content %}
 
 <div class="section vertical-center" id="login">
@@ -33,7 +35,7 @@
                     <img id="continue-with-facebook-svg" src="{% static 'svg/continue_with_facebook.svg' %}" alt="">
                     {% endblock %}
                 </a>
-                <h4 class="mt-2 text-muted">{% block if_account %}If you don't have an account, {% endblock %}<a href="/{% block if_account_link %}register{% endblock %}"><font class="text-secondary">{% block if_account_instruction_text %}register here.{% endblock %}</font></a></h4>
+                <h4 id="if-account-link" class="mt-2 text-muted">{% block if_account %}If you don't have an account{% endblock %}, <a href="/{% block if_account_link %}signup{% endblock %}"><font class="text-secondary">{% block if_account_instruction_text %}register here{% endblock %}</font></a>.</h4>
             </div>
             <div class="col-4 text-center my-auto" id="check-digital-results-table">
                 <img id="check-digital-results-table-svg" src="{% static 'svg/check_digital_results_table.svg' %}" alt="">
