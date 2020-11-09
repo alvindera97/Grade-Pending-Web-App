@@ -19,6 +19,7 @@
     {% endblock %}
 
     <title>
+        {% block title_prefix %}{% endblock %}
         {% block title %}
         {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
         {% endblock %}
