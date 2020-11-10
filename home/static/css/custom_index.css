@@ -35,7 +35,7 @@ $grid-breakpoints: (
 /* MEDIA QUERIES */
 @media screen and (max-width: 1199px) {
     div#illustration-and-text-section {
-        margin-top: -50px;
+        margin-top: -20px;
     }
 }
 
