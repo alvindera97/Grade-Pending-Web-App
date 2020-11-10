@@ -1,7 +1,7 @@
 from django.urls import path
 
-from institutions.views import institutions_home as home
+from . import views
 
 urlpatterns = [
-    path('', home),
+    path('', views.institutions_home, name="institutions_index_page"),
 ]
