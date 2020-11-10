@@ -21,7 +21,7 @@
     <title>
         {% block title_prefix %}{% endblock %}
         {% block title %}
-        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% if self.seo_title %}{{ self.seo_title }}{% elif self.title %}{{ self.title }}{% else %}Grade Pending Calculator | Calculate Your Gp and Cgpa In Seconds{% endif %}
         {% endblock %}
     </title>
 </head>
