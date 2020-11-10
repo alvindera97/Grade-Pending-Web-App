@@ -39,3 +39,16 @@ class TestHomePage(Main):
         # After clicking the button, he is directed to the sign up page as he can see from the
         # end of the URL pointing towards the sign up page '/signup/'
         self.assertEqual(self.browser.current_url, self.live_server_url + '/signup/')
+
+    def test_institutions_button(self):
+        """Test if the institutions button directs to the institutions page"""
+        # James is back at the home page
+        self.browser.get(self.live_server_url)
+        # sets his sights on the institutions button
+        institutions_button = self.browser.find_element_by_id('institutions-button')
+        # He clicks on the button
+        institutions_button.click()
+        # after clicking the button, he is redirected to the registration page
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/institutions/')
+        # while he is on the page, he ascertains that he is on the institutions page as hinted on the title of the page
+        self.assertIn("Institutions", self.browser.title)
