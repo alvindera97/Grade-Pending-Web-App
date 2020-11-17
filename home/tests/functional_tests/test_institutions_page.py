@@ -13,14 +13,3 @@ class TestInstitutionsPage(Main):
         institutions_page_button = self.browser.find_element_by_id("institutions-button")
         institutions_page_button.click()
         self.assertIn("Institutions", self.browser.title)
-
-    def test_logo_displays_on_page(self):
-        self.get_institution_page()
-        logo = self.browser.find_element_by_id('logo')
-        self.assertTrue(logo.is_displayed())
-
-    def test_header_of_the_institution_page(self):
-        self.get_institution_page()
-        header_text = self.browser.find_element_by_id('header-text')
-        self.assertIn("Grade Pending Calculator Institutions List", header_text.text)
-        self.assertTrue(header_text.is_displayed())
