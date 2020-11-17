@@ -59,3 +59,7 @@ class Main(StaticLiveServerTestCase, TestCase):
     def get_institution_page(self):
         """Load the institutions page on the test browser"""
         self.browser.get(self.live_server_url + '/institutions/')
+
+    def get_home_page(self):
+        """Load the home page on the test browser"""
+        self.browser.get(self.live_server_url)
