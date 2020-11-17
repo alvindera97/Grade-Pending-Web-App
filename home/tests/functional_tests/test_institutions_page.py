@@ -1,16 +1,17 @@
 """
    Test suite responsible for testing unit functionalities of the institutions page
 """
-from django.test import override_settings
 
 from .main import Main
 
 
-@override_settings(DEBUG=True)
 class TestInstitutionsPage(Main):
     """Test suite for the institutions page as viewed from the homepage"""
     def test_institution_page_loads(self):
-        self.get_institution_page()
+        """Test if institution page loads from Home Page"""
+        self.browser.get(self.live_server_url)
+        institutions_page_button = self.browser.find_element_by_id("institutions-button")
+        institutions_page_button.click()
         self.assertIn("Institutions", self.browser.title)
 
     def test_logo_displays_on_page(self):
