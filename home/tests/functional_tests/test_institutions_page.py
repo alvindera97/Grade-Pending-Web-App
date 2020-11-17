@@ -8,9 +8,7 @@ from .main import Main
 
 @override_settings(DEBUG=True)
 class TestInstitutionsPage(Main):
-    def get_institution_page(self):
-        self.browser.get(self.live_server_url + '/institutions/')
-
+    """Test suite for the institutions page as viewed from the homepage"""
     def test_institution_page_loads(self):
         self.get_institution_page()
         self.assertIn("Institutions", self.browser.title)

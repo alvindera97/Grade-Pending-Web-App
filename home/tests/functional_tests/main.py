@@ -55,3 +55,7 @@ class Main(StaticLiveServerTestCase, TestCase):
 
     def tearDown(self) -> None:
         self.browser.quit()
+
+    def get_institution_page(self):
+        """Load the institutions page on the test browser"""
+        self.browser.get(self.live_server_url + '/institutions/')
