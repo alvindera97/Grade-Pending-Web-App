@@ -17,13 +17,33 @@ class TestHomePage(Main):
         # James hears of this new website, it's known as a universal grade pending calculator
         # He opens the page and he sees that the page title self-explains the purpose of the website
         # The title of the page (or home page) reads:
-        # "Grade Pending Calculator | Calculate Your Gp And Cgpa In Seconds"
+
+        # "Grade Pending Calculator | Calculate Your Gp in a matter of seconds
+        # with our grade pending calculator. It's fast, easy and reliable."
+        welcome_text = self.browser.find_element_by_id("welcome-text")
+        self.assertEqual(welcome_text.text, """Calculate your GP in a matter of seconds with our  
+        grade pending calculator. It's fast, easy and reliable.""")
+        self.assertGreater(len(welcome_text.text), 110)
         self.assertEqual(self.browser.title, site_main_title)
+
+        # There is also an instructions button.
+        instructions_button = self.browser.find_element_by_link_text('INSTRUCTIONS')
+        # He clicks on it
+        instructions_button.click()
+        # and he views that the institutions button takes him to an institutions page as noted by
+        # the trailing slash at the end of the link
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/instructions/')
 
     def test_login_button(self):
         """Test if the home page button is functional"""
-        # James is however confronted with 3 buttons that clearly spell out
-        # "Login", "Register" and "Institutions"
+        # James is however attracted to the text at the bottom of the screen
+        # asking if he already had an account:
+        have_account_text = self.browser.find_element_by_id("already-have-account-text")
+        self.assertEqual(have_account_text.text, "Already have an account?")
+        login_button = self.browser.find_element_by_link_text("Login")
+        # he doesn't have an account, however, he clicks the login button and
+        # ignores the huge "REGISTER" button
+        login_button.click()
         home_page_button = self.browser.find_element_by_id('login-button')
         # He decides to click on the loin button
         home_page_button.click()
@@ -31,6 +51,10 @@ class TestHomePage(Main):
         # login page because of the trailing
         # /login/ in the browser URL.
         self.assertEqual(self.browser.current_url, self.live_server_url + '/login/')
+        self.assertIn('login', self.browser.title)
+        # satisfied that he actually reached the login page, he returns ot the lading page
+        self.browser.get(self.live_server_url)
+        self.assertEqual(self.browser.title, site_main_title)
 
     def test_register_button(self):
         """Test if the home page button is functional"""
