@@ -39,12 +39,12 @@ class Main(StaticLiveServerTestCase, TestCase):
         )
 
         # Set up home page
-        cls.home_page = HomePage(title=site_main_title)
+        cls.landing_Page = HomePage(title=site_main_title)
         # publish the home page!
-        cls.root.add_child(instance=cls.home_page).save_revision().publish()
+        cls.root.add_child(instance=cls.landing_Page).save_revision().publish()
 
         # don't forget to make the home page the root page of the Site object
-        cls.site.root_page = cls.home_page
+        cls.site.root_page = cls.landing_Page
         cls.site.save()
 
         super(Main, cls).setUpClass()
@@ -60,6 +60,6 @@ class Main(StaticLiveServerTestCase, TestCase):
         """Load the institutions page on the test browser"""
         self.browser.get(self.live_server_url + '/institutions/')
 
-    def get_home_page(self):
+    def get_landing_page(self):
         """Load the home page on the test browser"""
         self.browser.get(self.live_server_url)
