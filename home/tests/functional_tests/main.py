@@ -63,3 +63,8 @@ class Main(StaticLiveServerTestCase, TestCase):
     def get_landing_page(self):
         """Load the home page on the test browser"""
         self.browser.get(self.live_server_url)
+
+    def get_login_page(self):
+        """Load the login page on the test browser"""
+        login_url = self.live_server_url + '/login/'
+        self.browser.get(login_url)
