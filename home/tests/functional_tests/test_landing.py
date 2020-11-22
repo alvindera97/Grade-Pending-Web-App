@@ -22,7 +22,7 @@ class TestHomePage(Main):
         # with our grade pending calculator. It's fast, easy and reliable."
         welcome_text = self.browser.find_element_by_id("welcome-text")
         self.assertEqual(welcome_text.text, """Calculate your GP in a matter of seconds with our  
-        grade pending calculator. It's fast, easy and reliable.""")
+         grade pending calculator. It's fast, easy and reliable.""")
         self.assertGreater(len(welcome_text.text), 110)
         self.assertEqual(self.browser.title, site_main_title)
 
@@ -66,14 +66,14 @@ class TestHomePage(Main):
         # end of the URL pointing towards the sign up page '/signup/'
         self.assertEqual(self.browser.current_url, self.live_server_url + '/signup/')
 
-    def test_institutions_button(self):
+    def test_institutions_link(self):
         """Test if the institutions button directs to the institutions page"""
         # James is back at the home page
-        # sets his sights on the institutions button
-        institutions_button = self.browser.find_element_by_id('institutions-button')
-        # He clicks on the button
-        institutions_button.click()
-        # after clicking the button, he is redirected to the registration page
+        # sets his sights on the institutions underlined link
+        institutions_link = self.browser.find_element_by_id('institutions-button')
+        # He clicks on the link
+        institutions_link.click()
+        # after clicking the link, he is redirected to the registration page
         self.assertEqual(self.browser.current_url, self.live_server_url + '/institutions/')
         # while he is on the page, he ascertains that he is on the
         # institutions page as hinted on the title of the page
