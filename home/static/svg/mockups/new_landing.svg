@@ -13,7 +13,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0 (b51213c273, 2020-08-10)"
-   sodipodi:docname="new_landing.svg">
+   sodipodi:docname="new_landing.svg"
+   inkscape:export-filename="/home/cecelia/Documents/PROJECTS/Grade_Pending_Web_App/grade_pending_calculator/home/static/svg/mockups/new_landing.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <filter
@@ -916,7 +919,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="400"
+     inkscape:cx="350"
      inkscape:cy="560"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
