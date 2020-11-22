@@ -69,7 +69,6 @@ class TestHomePage(Main):
     def test_institutions_button(self):
         """Test if the institutions button directs to the institutions page"""
         # James is back at the home page
-        self.get_home_page()
         # sets his sights on the institutions button
         institutions_button = self.browser.find_element_by_id('institutions-button')
         # He clicks on the button
