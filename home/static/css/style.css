@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+
+/* LANDING PAGE */
+.container {
+  display: flex;
+}
+
+.instruc {
+  display: flex;
+  position: absolute;
+ padding-left: 1200px;
+ padding-right: 40px;
+  text-align: right;
+  padding-top: 25px;
+  
+}
+
+.img-container { position: relative; }
+
+.img-container .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.top {
+  width: 600px;
+  height: 530px;
+  margin-top: -160px;
+  margin-left: 30px;
+}
+
+.bottom {
+margin-top: -500px;
+height: 100%;
+}
+
+.container h3 {
+  display: inline-block;
+  font-size: 3.8rem;
+  margin-top: 100px;
+  margin-left: 650px;
+  padding-right:40px ;
+  text-align: right;
+  color: #000839;
+  width: 1100px;
+}
+
+.container #calc {
+  display: inline-block;
+  position: absolute;
+  padding-top: 250px;
+  width: 1350px;
+  padding-left: 940px;
+  padding-right: 40px;
+  font-size: 1.2rem;
+  text-align: right;
+  
+}
+
+.btn {
+  display: block;
+  position: absolute;
+  font-size: 1.3rem;
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+  padding: 15px 80px 15px 80px;
+  background-color: #000839;
+  color: #fff;
+  border-radius: 15px;
+  border: none;
+  margin-left: 1050px;
+  margin-top: -380px;
+}
+
+#aldy {
+  display: inline;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 1050px;
+  color:#000839 ;
+}
+
+#log {
+  color: #F5A328;
+}
+
+/* LOGIN PAGE */
+
+#welc {
+  display: inline-block;
+  font-size: 3.8rem;
+  margin-top: 100px;
+  margin-left: 800px;
+}
+
+#top1 {
+ margin-top: -85px;
+}
+
+#btn1 {
+  margin-top: -250px;
+}
+
+input[type=email] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  text-align: right;
+  width: 400px;
+}
+
+input[type=password] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  text-align: right;
+  width: 400px;
+}
+
+#email {
+  position: absolute;
+  margin-top: -450px;
+  margin-left: 900px;
+}
+#email1, #password1, #password2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#icon1, #icon2 {
+  margin-left: -400px;
+  color: #F5A328;
+}
+
+#password {
+  position: absolute;
+  margin-top: -370px;
+  margin-left: 900px;
+}
+
+#password3 {
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 900px; 
+}
+
+.aldy1, .aldy2 {
+  margin-left: 950px;
+  padding-top: 90px;
+}
+
+#btn2 {
+  margin-top: -200px;
+}
+
+
+
+
